@@ -1,3 +1,21 @@
+Edited By IPaPa
+
+Implement Fan Annotation 
+
+has parameters with
+
+centerX: center x of fan
+centerY: center y of fan 
+minRadius: minimal radius of fan
+maxRadius: maximun radius of fan
+minTheta: minimal theta of fan ,takes degree as input
+maxTheta: maxinum theta of fan ,takes degree as input
+
+use "fan" as type name
+
+
+
+
 # chartjs-plugin-annotation.js
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/chartjs/chartjs-plugin-annotation/Node.js%20CI)](https://github.com/chartjs/chartjs-plugin-annotation/actions/workflows/ci.yml)
