@@ -9,6 +9,7 @@ export interface AnnotationTypeRegistry {
 	box: BoxAnnotationOptions
   ellipse: EllipseAnnotationOptions
   point: PointAnnotationOptions
+  fan: FanAnnotationOptions
 }
 
 export type AnnotationType = keyof AnnotationTypeRegistry;
@@ -62,6 +63,15 @@ interface PointAnnotationOptions extends CoreAnnotationOptions {
 	yValue?: Scriptable<ScaleValue, PartialEventContext>;
 }
 
+interface FanAnnotationOptions extends CoreAnnotationOptions {
+	backgroundColor: Scriptable<Color, PartialEventContext>,
+	centerX: Scriptable<ScaleValue, PartialEventContext>;
+  	centerY: Scriptable<ScaleValue, PartialEventContext>;
+  	minRadius: Scriptable<number, PartialEventContext>,
+  	maxRadius: Scriptable<number, PartialEventContext>,
+  	minTheta: Scriptable<number, PartialEventContext>,
+  	maxTheta: Scriptable<number, PartialEventContext>
+}
 export interface AnnotationPluginOptions extends AnnotationEvents {
 	annotations: AnnotationOptions[] | Record<string, AnnotationOptions>,
 	dblClickSpeed?: Scriptable<number, PartialEventContext>,
